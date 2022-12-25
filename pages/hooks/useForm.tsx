@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, ChangeEventHandler, useState } from 'react';
 
 const formatFields = (fields: { [key: string]: [string, (Function | Function[])?] }) => {
   const result = {};
@@ -8,12 +8,12 @@ const formatFields = (fields: { [key: string]: [string, (Function | Function[])?
       fields[fieldName][0],
       fields[fieldName][1] || defaultValidation
     );
-    result[fieldName] = {
+    Object.assign(result, {[fieldName]: {
       value: fields[fieldName][0],
       validations: fields[fieldName][1] || defaultValidation,
       error,
       errors,
-    };
+    }});
   });
   return result;
 };
@@ -56,7 +56,7 @@ const verifyValidations = (value: string, validations: Function | Function[]) =>
 export const useForm = (fields: { [key: string]: [string, (Function | Function[])?] }) => {
   const [formState, setFormState] = useState<any>(() => formatFields(fields));
 
-  const onChangeInput = ({ target }) => {
+  const onChangeInput = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = target;
     const currentField = formState[name];
     const { error, errors } = verifyValidations(value, currentField.validations);
