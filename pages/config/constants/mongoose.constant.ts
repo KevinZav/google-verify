@@ -1,0 +1,1 @@
+export const MONGOOSE_STRING =  'mongodb+srv://KevinZav:amISrowgqNqs4QYN@clusterk.uw8oi.mongodb.net/?retryWrites=true&w=majority';

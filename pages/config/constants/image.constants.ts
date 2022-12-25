@@ -1,0 +1,1 @@
+export const GOOGLE_IMAGE_CONSTANT = 'https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png';
