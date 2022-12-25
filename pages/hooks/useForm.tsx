@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 const formatFields = (fields: { [key: string]: [string, (Function | Function[])?] }) => {
   const result = {};

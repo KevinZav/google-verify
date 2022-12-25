@@ -5,3 +5,5 @@ export const CustomImage = ({url, alt, style}: {url: string, alt?: string, style
         <img src={url} alt={url} style={style} />
     </picture>
 }
+
+export default CustomImage;
