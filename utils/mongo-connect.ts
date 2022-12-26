@@ -1,6 +1,5 @@
 import { connect, connection } from "mongoose"
-import { MONGOOSE_STRING } from '../pages/config/constants/mongoose.constant';
-
+import { MONGOOSE_STRING } from '../config/constants/mongoose.constant';
 
 const connectionObject = {
     isConnected: false,

@@ -1,5 +1,5 @@
-import { GOOGLE_IMAGE_CONSTANT } from './config/constants/image.constants';
-import { CustomImage } from './components/Image/image.component';
+import { GOOGLE_IMAGE_CONSTANT } from '../config/constants/image.constants';
+import CustomImage from '../components/Image/image.component';
 
 const SuccessPage = () => {
     return (

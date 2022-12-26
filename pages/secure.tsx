@@ -1,11 +1,11 @@
 import { FormEvent, useState } from "react";
-import { CustomImage } from "./components/Image/image.component";
-import { GOOGLE_IMAGE_CONSTANT } from "./config/constants/image.constants";
-import { emailValidation } from "./config/validations/email.validation";
-import { useForm } from "./hooks/useForm";
-import { isNotEmptyValidation } from "./config/validations/not-empty.validation";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { emailValidation } from "../config/validations/email.validation";
+import { isNotEmptyValidation } from "../config/validations/not-empty.validation";
+import { GOOGLE_IMAGE_CONSTANT } from '../config/constants/image.constants';
+import { useForm } from "../hooks/useForm";
+import CustomImage from '../components/Image/image.component';
 
 const SecurePage = () => {
   const { email, password, verifyPassword, onChangeInput } = useForm({
