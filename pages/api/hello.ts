@@ -1,8 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import mongoose from 'mongoose';
 import type { NextApiRequest, NextApiResponse } from 'next'
+import user from '../../schemas/user';
 import { mongooseConnect } from '../../utils/mongo-connect';
-import user from './schemas/user';
 
 mongooseConnect();
 
